@@ -280,3 +280,5 @@ id_array =[]
     }
   }
 end
+
+def big_shoe_rebounds
