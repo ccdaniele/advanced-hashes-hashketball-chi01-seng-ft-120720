@@ -225,7 +225,7 @@ id_array =[]
  
  def player_numbers(team_names)
    
-  final = 0
+  final_array = []
 players_array = []
 id_array =[]
  game_hash.map{|field, team|
@@ -245,9 +245,9 @@ id_array =[]
   players_array.map {|players_id|
     players_id.map{|inner_player|
       inner_player.map{|id, value|
-      return inner_player[:number]
+     final_array << inner_player[:number]
       }
     }
   }
-  
+  return final_array.uniq
 end
