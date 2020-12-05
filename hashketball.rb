@@ -223,7 +223,7 @@ id_array =[]
  
  end
  
- def player_numbers(player_name)
+ def player_numbers(team_names)
    
   final = 0
 players_array = []
@@ -236,9 +236,9 @@ id_array =[]
     }
   }
   
-  if team_name == id_array[0]
+  if team_names == id_array[0]
   players_array << id_array[2]
-  elsif team_name == id_array[3]
+  elsif team_names == id_array[3]
   players_array << id_array[5]
   end
   
