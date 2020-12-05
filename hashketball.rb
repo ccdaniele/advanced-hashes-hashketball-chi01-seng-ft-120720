@@ -274,10 +274,9 @@ id_array =[]
     players_id.map{|inner_player|
       inner_player.map{|id, value|
         if value == player_name
-         final_array << inner_player
+         return inner_player
         end
       }
     }
   }
-  return final_array
 end
