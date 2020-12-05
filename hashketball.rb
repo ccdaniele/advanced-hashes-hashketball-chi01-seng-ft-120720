@@ -282,3 +282,46 @@ id_array =[]
 end
 
 def big_shoe_rebounds
+  
+  shoe_array = []
+shoe_final = []
+players_array = []
+biggest_shoe = 0
+id_array =[]
+big_rebounds =[]
+
+ game_hash.map{|field, team|
+    team.map {|team, players|
+    if team = players
+      id_array << players
+    end
+    }
+  }
+    
+  players_array << id_array[2]
+  players_array << id_array[5]
+  
+
+  players_array.map {|players_id|
+    players_id.map{|inner_player|
+      inner_player.map{|id, value|
+      shoe_array << inner_player[:shoe]
+      }
+    }
+  }
+  shoe_final = shoe_array.uniq
+  biggest_shoe = shoe_final.max
+  
+  players_array.map {|players_id|
+    players_id.map{|inner_player|
+      inner_player.map{|id, value|
+        if inner_player[:shoe] == biggest_shoe
+        big_rebounds << inner_player[:rebounds]
+        end
+      }
+    }
+  }
+  
+ return big_rebounds [0]
+  
+end
