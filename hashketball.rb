@@ -254,4 +254,30 @@ end
 
 def player_stats(player_name)
   
+  final_array = []
+players_array = []
+score = 0
+id_array =[]
+ game_hash.map{|field, team|
+    team.map {|team, players|
+    if team = players
+      id_array << players
+    end
+    }
+  }
+    
+  players_array << id_array[2]
+  players_array << id_array[5]
   
+
+  players_array.map {|players_id|
+    players_id.map{|inner_player|
+      inner_player.map{|id, value|
+        if value == player_name
+         final_array << inner_player
+        end
+      }
+    }
+  }
+  return final_array
+end
