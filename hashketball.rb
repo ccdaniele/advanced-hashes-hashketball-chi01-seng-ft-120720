@@ -251,3 +251,7 @@ id_array =[]
   }
   return final_array.uniq
 end
+
+def player_stats(player_name)
+  
+  
