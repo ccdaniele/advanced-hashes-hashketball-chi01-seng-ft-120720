@@ -225,9 +225,8 @@ id_array =[]
  
  def player_numbers(player_name)
    
-   final = 0
+  final = 0
 players_array = []
-score = 0
 id_array =[]
  game_hash.map{|field, team|
     team.map {|team, players|
@@ -236,17 +235,17 @@ id_array =[]
     end
     }
   }
-    
-  players_array << id_array[2]
-  players_array << id_array[5]
   
-
+  if team_name == id_array[0]
+  players_array << id_array[2]
+  elsif team_name == id_array[3]
+  players_array << id_array[5]
+  end
+  
   players_array.map {|players_id|
     players_id.map{|inner_player|
       inner_player.map{|id, value|
-        if value == player_name
-          return inner_player[:number]
-        end
+      return inner_player[:number]
       }
     }
   }
